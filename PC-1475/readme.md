@@ -13,7 +13,7 @@
 | I      | enter imag part or back to real part
 | J      | same as I (for engineers)
 | +/-    | change sign
-| SPC    | change sign
+| SPC    | same as +/-, change sign
 | BS     | delete
 | LEFT   | delete
 | SPC    | change sign
@@ -72,10 +72,10 @@
 | /      | divide
 | !      | factorial/gamma(x+1), fact(X) gamma(X+1) -\> X
 | %      | percentage, X/100\*YJ -\> XI
-| (      | STO #register (press digit, or op then digit)
-| )      | RCL #register (press digit, or op then digit)
-| ,      | RCL #register (press digit)
-| ?      | push random 0<x<1 -\> X
+| (      | STO (followed optionally by +, -, \* or /) and then digit to store #register
+| )      | RCL (followed optionally by +, -, \* or /) and then digit to recall #register
+| ,      | same as ), RCL #register
+| ?      | push random 0\<x\<1 -\> X
 | -\>DEG | hh.mmss -\> degree
 | -\>DMS | degree -\> hh.mmss
 | PI     | push pi -\> X
