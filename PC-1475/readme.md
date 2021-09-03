@@ -35,7 +35,7 @@
 | I      | enter imag part / back to real part
 | J      | same as I (for engineers)
 | K      | nCr(Y,X) -\> X
-| L      | STO #register (press digit)
+| L      | STO followed by a digit to store #register
 | M      | mean of y and x -\> Y,X
 | N      | floor, floor(XI) -\> XI
 | Q      | quotient and remainder of Y/X -\> X,Y (quotient in X, remainder in Y)
@@ -72,9 +72,9 @@
 | /      | divide
 | !      | factorial/gamma(x+1), fact(X) gamma(X+1) -\> X
 | %      | percentage, X/100\*YJ -\> XI
-| (      | STO (followed optionally by +, -, \* or /) and then digit to store #register
-| )      | RCL (followed optionally by +, -, \* or /) and then digit to recall #register
-| ,      | same as ), RCL #register
+| (      | (disabled) STO (followed optionally by +, -, \* or /) and then digit to store #register
+| )      | (disabled) RCL (followed optionally by +, -, \* or /) and then digit to recall #register
+| ,      | RCL followed by a digit to recakk #register
 | ?      | push random 0\<x\<1 -\> X
 | -\>DEG | hh.mmss -\> degree
 | -\>DMS | degree -\> hh.mmss
@@ -83,3 +83,15 @@
 | INS    | stat add Y,X (updates registers R2 to R7 as per HP-15C stat)
 | DEL    | stat remove Y,X (updates registers R2 to R7 as per HP-15C stat)
 
+Note: ( and ) are disabled as STO and RCL, respectively, to fit the program in
+an unexpanded PC-1475.  This removes the ability to update a memory register
+with +, -, / and \*.
+
+To enable ( and ), change lines 140 and 141 as follows:
+
+    ' (: STO [+|-|/|*] #register
+    140 GOTO 900
+    ' ): RCL [+|-|/|*] #register
+    141 GOTO 910
+
+Then uncomment lines 900 to 917.
