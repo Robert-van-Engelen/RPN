@@ -3,6 +3,8 @@
 A collection of powerful RPN calculator programs for the SHARP PC-G850(V)(S)
 and PC-1475.
 
+![PC-G850](PC-G850.png)
+
 The RPN programs are written in BASIC.  The programs can be easily extended to
 add custom operations and user-defined functions.
 
