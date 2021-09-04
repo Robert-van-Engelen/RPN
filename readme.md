@@ -9,8 +9,7 @@ The RPN programs are written in BASIC.  The programs can be easily extended to
 add custom operations and user-defined functions.
 
 Familiarity with RPN calculators, in particular the
-[HP-15C](http://www.hp.com/ctg/Manual/c03030589.pdf), is useful but not
-required.
+[HP-15C](http://www.hp.com/ctg/Manual/c03030589.pdf), is recommended.
 
 ## Features
 

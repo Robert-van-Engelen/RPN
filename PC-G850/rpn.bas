@@ -21,6 +21,17 @@
 ' Registers with real and imag values:
 '  R(0)~R(9),I(0)~I(9)
 
+' Keys for number entry
+'  0~9     digit
+'  .       period
+'  Exp/E   x10^
+'  I       enter imag part / back to real part
+'  J       same as I (for engineers)
+'  SPACE   (or SHIFT minus) change sign
+'  BS      delete
+'  LEFT    delete
+'  ENTER   push on stack
+
 ' Keys for operations and functions:
 '  A       abs, |XI| -> XI
 '  C       ceiling, ceil(XI) -> XI
@@ -68,18 +79,7 @@
 '  M+      stat add Y,X (updates registers R2 to R7 as per HP-15C stat)
 '  M-      stat remove Y,X
 '  =       enter Basic expression
-'  ...     any PC-G850 calculator function key such as SIN
-
-' Keys for number entry
-'  0~9     digit
-'  .       period
-'  Exp/E   x10^
-'  I       enter imag part / back to real part
-'  J       same as I (for engineers)
-'  SPACE   (or SHIFT minus) change sign
-'  BS      delete
-'  LEFT    delete
-'  ENTER   push on stack
+'  SIN ... any PC-G850 calculator function key such as SIN
 
 ' VARIABLES
 '  R(9)    registers 0 to 9 real part

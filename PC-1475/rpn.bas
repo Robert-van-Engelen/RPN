@@ -1,4 +1,4 @@
-' RPN COMPLEX CALCULATOR
+' RPN COMPLEX CALCULATOR FOR THE SHARP PC-1475
 ' Emulates HP 15C
 
 ' Author: Dr. Robert A. van Engelen, 2020
@@ -13,6 +13,19 @@
 '  X,I (bottom row)
 '
 '  L,M last value
+
+' Keys for number entry
+'  0~9     digit
+'  .       period
+'  EXP     x10^
+'  E       x10^
+'  I       enter imag part / back to real part
+'  J       same as I (for engineers)
+'  +/-     change sign
+'  SPC     change sign
+'  BS      delete
+'  LEFT    delete
+'  ENTER   push on stack
 
 ' Keys for operations and functions:
 '  A       abs, |XI| -> XI
@@ -80,20 +93,7 @@
 '  INS     stat add Y,X (updates registers R2 to R7 as per HP-15C stat)
 '  DEL     stat remove Y,X (updates registers R2 to R7 as per HP-15C stat)
 '  =       enter expression (Basic)
-'  ...     any PC-1475 calculator function key such as SIN
-
-' Keys for number entry
-'  0~9     digit
-'  .       period
-'  EXP     x10^
-'  E       x10^
-'  I       enter imag part / back to real part
-'  J       same as I (for engineers)
-'  +/-     change sign
-'  SPC     change sign
-'  BS      delete
-'  LEFT    delete
-'  ENTER   push on stack
+'  SIN ... any PC-1475 calculator function key such as SIN
 
 ' VARIABLES
 '  R(9)    registers 0 to 9 real part
@@ -631,7 +631,6 @@
 ' ---
 
 ' recall [+|-|*|/] #register
-' 910 GOSUB 920: A=VAL CHR$ A,N=R(A),O=I(A),P=1: GOTO 20
 ' 910 GOSUB 920
 ' 911 IF A=43 GOSUB 920: A=VAL CHR$ A,X=X+R(A),I=I+I(A): GOTO 40
 ' 912 IF A=45 GOSUB 920: A=VAL CHR$ A,X=X-R(A),I=I-I(A): GOTO 40
