@@ -24,6 +24,12 @@ Familiarity with RPN calculators, in particular the
 - GCD and LCM
 - rational approximation of a decimal
 
+## How to use
+
+- SHARP [PC-G850(V)(S)](PC-G850/readme.md)
+
+- SHARP [PC-1475](PC-1475/readme.md)
+
 ## How to load
 
 Use the excellent [PocketTools](https://www.peil-partner.de/ifhe.de/sharp/)
